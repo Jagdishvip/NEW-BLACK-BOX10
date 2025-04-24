@@ -1,0 +1,91 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    namespace "top.niunaijun.blackbox"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    externalNativeBuild {
+        cmake {
+            path file('./src/main/cpp/CMakeLists.txt')
+        }
+    }
+    
+    dexOptions {
+        preDexLibraries false
+        maxProcessCount 8
+        javaMaxHeapSize "4g"
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    
+    buildFeatures {
+        aidl true
+    }
+    
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+        warningsAsErrors false
+        disable "UnusedResources", 'RestrictedApi'
+        textOutput "stdout"
+        textReport false
+        check 'NewApi', 'InlinedApi'
+    }
+    ndkVersion '24.0.8215888'
+}
+
+
+tasks.withType(Javadoc) {
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    implementation 'com.github.tiann:FreeReflection:3.2.2'//3.1.0'
+    implementation "com.github.CodingGay.BlackReflection:core:1.1.4" //1.1.4
+    implementation project(':Bcore:black-fake')
+    implementation project(':Bcore:black-hook')
+    implementation project(':Bcore:android-mirror')
+
+    //implementation 'top.canyie.pine:core:0.2.9'
+   // implementation 'top.canyie.pine:xposed:0.1.0'
+}

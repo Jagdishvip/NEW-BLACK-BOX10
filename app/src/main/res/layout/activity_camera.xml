@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:padding="16dp"
+     android:orientation="vertical">
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:gravity="center"
+         android:textSize="18sp"
+         android:paddingBottom="12dp"
+         android:id="@+id/protect_method_text"
+         android:text="Protect Your Camera Privacy."
+         android:textStyle="bold" />
+
+    <Button
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:backgroundTint="#018786"
+         android:textColor="@android:color/white"
+         android:id="@+id/protect_method_btn"
+         android:text="Choose Protect Method" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:paddingBottom="8dp"
+         android:textColor="@android:color/holo_red_dark"
+         android:id="@+id/protect_tip"
+         android:text="Tips: This will replace the camera data with a local video."
+         android:paddingTop="12dp" />
+
+    <Button
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:drawablePadding="8dp"
+         android:drawableEnd="@android:drawable/ic_media_play"
+         android:backgroundTint="#018786"
+         android:textColor="@android:color/white"
+         android:id="@+id/protect_video_select"
+         android:text="Choose Local Video" />
+
+    <EditText
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:background="#ff00ff"
+         android:hint="Video URI"
+         android:padding="8dp"
+         android:textColorHint="@android:color/darker_gray"
+         android:enabled="false"
+         android:layout_marginTop="8dp"
+         android:id="@+id/protect_path" />
+
+    <TextView
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:layout_marginTop="16dp"
+         android:id="@+id/protect_audio"
+         android:text="Enable Audio:" />
+
+    <androidx.appcompat.widget.SwitchCompat
+         android:layout_height="wrap_content"
+         android:layout_width="wrap_content"
+         android:checked="true"
+         android:id="@+id/protect_audio_switch" />
+
+    <Button
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:backgroundTint="@android:color/holo_red_dark"
+         android:textColor="@android:color/white"
+         android:layout_marginTop="24dp"
+         android:id="@+id/protect_save"
+         android:text="Save" />
+
+</LinearLayout>
