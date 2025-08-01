@@ -1,4 +1,4 @@
-# ★彡 [ ↻ Jagdish VIP ↺ ] 彡★🔥 **Android Virtual Injector (Non-Root)** 🔥
+# ★彡 [ ↻ **Jagdish VIP** ↺ ] 彡★🔥 **Android Virtual Injector (Non-Root)** 🔥
 An advanced injector to inject games and apps via Virtual Space without rooting your Android device.
 
 ## ⚡ What's Special About This Injector?
@@ -35,7 +35,7 @@ An advanced injector to inject games and apps via Virtual Space without rooting 
 ## 🌟 Credits
 
 **Full Credit & Developer:**  
-✨『 ↻ **Jagdish VIP** ↺ 』✨  
+✨『 ↻ **[Jagdish VIP](https://t.me/jagdish_vip)** ↺ 』✨  
 Creator of [NewBlackbox](https://github.com/jagdishvip/NewBlackbox)
 
 ---
@@ -52,9 +52,9 @@ Not compatible with games/apps protected by advanced anti-cheat mechanisms.
 
 ## 📲 Connect & Support
 
-- 📢 **Telegram Channel:** [Join Here](https://t.me/jagdish_vip)
-- 👤 **Telegram:** [Contact Me](https://t.me/jagdish_vip)
-- 📩 **Email:** [JagdishJatav755@gmail.com](mailto:JagdishJatav755@gmail.com)
+- 📢 **[Telegram Channel](https://t.me/jagdish_vip)**  
+- 👤 **[Telegram](https://t.me/jagdish_vip)**  
+- 📩 **[JagdishJatav755@gmail.com](mailto:JagdishJatav755@gmail.com)**
 
 ---
 
