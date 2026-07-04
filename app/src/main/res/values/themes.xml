@@ -1,28 +1,49 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.BlackBox" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color. -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BlackBox" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorSurface">@color/surface_light</item>
+        <item name="colorBackground">@color/bg_light</item>
+        <item name="android:colorBackground">@color/bg_light</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/primary_light</item>
-        <item name="colorSecondaryVariant">@color/primary</item>
         <item name="colorOnSecondary">@color/white</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
-        <item name="actionMenuTextColor">@color/primary_text</item>
-        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorOnSurface">@color/gray_dark</item>
+        <item name="colorOnBackground">@color/gray_dark</item>
+        <item name="android:statusBarColor">@color/surface_light</item>
+        <item name="android:navigationBarColor">@color/surface_light</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="elevationOverlayEnabled">true</item>
     </style>
 
-    <style name="ToolBarColorStyle" parent="ThemeOverlay.AppCompat.ActionBar">
-        <item name="actionMenuTextColor">@color/white</item>
-        <item name="colorControlNormal">@color/white</item>
-        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    <style name="Theme.BlackBox.Dark" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorPrimaryVariant">@color/primary</item>
+        <item name="colorSecondary">@color/accent_light</item>
+        <item name="colorSecondaryVariant">@color/accent</item>
+        <item name="colorError">@color/accent_light</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorBackground">@color/bg_dark</item>
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorOnPrimary">@color/bg_dark</item>
+        <item name="colorOnSecondary">@color/bg_dark</item>
+        <item name="colorOnError">@color/bg_dark</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 
-    <style name="WelcomeTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash</item>
+    <style name="WelcomeTheme" parent="Theme.BlackBox">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
     </style>
 </resources>

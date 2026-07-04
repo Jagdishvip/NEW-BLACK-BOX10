@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Typography Styles -->
+    <style name="TextHeadline1" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/text_headline_1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="TextHeadline2" parent="TextAppearance.MaterialComponents.Headline2">
+        <item name="android:textSize">@dimen/text_headline_2</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="TextTitle" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">@dimen/text_title_1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="TextBody" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">@dimen/text_body_1</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <style name="TextCaption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/text_caption</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:alpha">0.7</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="Button.Primary" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">?attr/colorPrimary</item>
+        <item name="cornerRadius">@dimen/corner_radius_lg</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:textSize">@dimen/text_body_2</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Button.Secondary" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="cornerRadius">@dimen/corner_radius_lg</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="strokeColor">?attr/colorPrimary</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="Card.Elevated" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">@dimen/corner_radius_lg</item>
+        <item name="cardElevation">@dimen/elevation_medium</item>
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+        <item name="android:layout_margin">@dimen/spacing_md</item>
+        <item name="contentPadding">@dimen/spacing_lg</item>
+    </style>
+
+    <!-- Toolbar Style -->
+    <style name="AppBarStyle" parent="Widget.MaterialComponents.AppBarLayoutPrimary">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="elevation">@dimen/elevation_high</item>
+    </style>
+</resources>

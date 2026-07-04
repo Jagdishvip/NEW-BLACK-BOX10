@@ -12,8 +12,8 @@ android {
         applicationId 'com.vspace'
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 9
-        versionName '1.0.10'
+        versionCode 10
+        versionName '2.0.0'
 
         ndk {
             abiFilters 'arm64-v8a'
@@ -66,29 +66,57 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation project(':Bcore')
 
+    // Material Design 3
     implementation 'com.google.android.material:material:1.11.0'
+    
+    // AndroidX
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
-    //implementation 'androidx.activity:activity-ktx:1.8.2'
-   // implementation 'androidx.fragment:fragment-ktx:1.6.2'
     implementation 'androidx.preference:preference-ktx:1.2.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-
+    
+    // Kotlin Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1'
 
+    // Lifecycle
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    
+    // Fragment
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
+    implementation 'androidx.activity:activity-ktx:1.8.2'
 
+    // UI Libraries
     implementation 'com.tbuonomo:dotsindicator:4.3'
     implementation 'com.afollestad.material-dialogs:core:3.3.0'
     implementation 'com.afollestad.material-dialogs:input:3.3.0'
     implementation 'com.github.nukc:StateView:v3.0.2'
     implementation 'com.github.Ferfalk:SimpleSearchView:0.2.1'
     implementation 'com.github.Othershe:CornerLabelView:1.0.0'
+    
+    // Image Loading
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+    
+    // Networking
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.10.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.10.0'
+    
+    // JSON
+    implementation 'com.google.code.gson:gson:2.10.1'
+    
+    // Navigation
     implementation 'org.osmdroid:osmdroid-android:6.1.18'
     implementation 'com.gitee.cbfg5210:RVAdapter:0.3.7'
+    
+    // Testing
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }

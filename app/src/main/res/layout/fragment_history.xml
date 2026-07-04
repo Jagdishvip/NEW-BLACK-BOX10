@@ -17,35 +17,18 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorSurface"
             app:elevation="@dimen/elevation_medium"
-            app:title="Applications" />
+            app:title="Injection History" />
     </com.google.android.material.appbaraylout.AppBarLayout>
 
-    <!-- Search Bar -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_md"
-        app:boxBackgroundMode="outline"
-        app:cornerRadius="@dimen/corner_radius_lg"
-        app:endIconMode="clear_text">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/search_input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Search apps..."
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Apps RecyclerView -->
+    <!-- History RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/apps_recycler"
+        android:id="@+id/history_recycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_margin="@dimen/spacing_md"
         tools:itemCount="5"
-        tools:listitem="@layout/widget_app_card" />
+        tools:listitem="@layout/item_history" />
 
     <!-- Empty State -->
     <LinearLayout
@@ -61,12 +44,12 @@
             android:layout_height="@dimen/icon_size_large"
             android:tint="?attr/colorPrimary"
             android:alpha="0.5"
-            app:srcCompat="@android:drawable/ic_menu_view" />
+            app:srcCompat="@android:drawable/ic_menu_recent_history" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No apps found"
+            android:text="No history yet"
             android:textAppearance="@style/TextTitle"
             android:layout_marginTop="@dimen/spacing_lg" />
     </LinearLayout>
