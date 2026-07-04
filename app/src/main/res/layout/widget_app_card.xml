@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_md"
+    android:gravity="center_vertical">
+
+    <!-- App Icon -->
+    <ImageView
+        android:id="@+id/iv_app_icon"
+        android:layout_width="@dimen/icon_size_large"
+        android:layout_height="@dimen/icon_size_large"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/app_icon"
+        tools:src="@android:drawable/ic_menu_view" />
+
+    <!-- App Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/spacing_md">
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextBody"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="App Name" />
+
+        <TextView
+            android:id="@+id/tv_package_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextCaption"
+            android:layout_marginTop="@dimen/spacing_xs"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="com.example.app" />
+    </LinearLayout>
+
+    <!-- Action Icon -->
+    <ImageView
+        android:layout_width="@dimen/icon_size_medium"
+        android:layout_height="@dimen/icon_size_medium"
+        android:scaleType="centerInside"
+        android:tint="?attr/colorPrimary"
+        android:contentDescription="@string/action_select"
+        app:srcCompat="@android:drawable/ic_menu_forward" />
+</LinearLayout>
