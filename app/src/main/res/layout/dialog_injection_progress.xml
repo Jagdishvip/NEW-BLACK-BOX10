@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_xl"
+    android:gravity="center_horizontal">
+
+    <!-- Progress Circle -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress_circular"
+        android:layout_width="@dimen/icon_size_large"
+        android:layout_height="@dimen/icon_size_large"
+        android:indeterminate="false"
+        app:indicatorSize="80dp"
+        app:trackThickness="4dp"
+        app:indicatorColor="?attr/colorPrimary" />
+
+    <!-- Progress Text -->
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Injecting..."
+        android:textAppearance="@style/TextBody"
+        android:layout_marginTop="@dimen/spacing_xl" />
+
+    <!-- Percentage -->
+    <TextView
+        android:id="@+id/progress_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textAppearance="@style/TextCaption"
+        android:layout_marginTop="@dimen/spacing_sm" />
+
+    <!-- Linear Progress -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xl"
+        android:indeterminate="false"
+        app:trackThickness="4dp"
+        app:indicatorColor="?attr/colorPrimary" />
+
+    <!-- Status Steps -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/spacing_xl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="@dimen/spacing_sm">
+
+            <ImageView
+                android:id="@+id/icon_step1"
+                android:layout_width="@dimen/icon_size_medium"
+                android:layout_height="@dimen/icon_size_medium"
+                android:tint="?attr/colorPrimary"
+                app:srcCompat="@android:drawable/ic_menu_view" />
+
+            <TextView
+                android:id="@+id/text_step1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Loading app data..."
+                android:textAppearance="@style/TextCaption"
+                android:layout_marginStart="@dimen/spacing_md" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="@dimen/spacing_sm">
+
+            <ImageView
+                android:id="@+id/icon_step2"
+                android:layout_width="@dimen/icon_size_medium"
+                android:layout_height="@dimen/icon_size_medium"
+                android:tint="@color/gray_medium"
+                app:srcCompat="@android:drawable/ic_menu_slideshow" />
+
+            <TextView
+                android:id="@+id/text_step2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Processing library..."
+                android:textAppearance="@style/TextCaption"
+                android:layout_marginStart="@dimen/spacing_md"
+                android:alpha="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="@dimen/spacing_sm">
+
+            <ImageView
+                android:id="@+id/icon_step3"
+                android:layout_width="@dimen/icon_size_medium"
+                android:layout_height="@dimen/icon_size_medium"
+                android:tint="@color/gray_medium"
+                app:srcCompat="@android:drawable/ic_menu_save" />
+
+            <TextView
+                android:id="@+id/text_step3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Finalizing..."
+                android:textAppearance="@style/TextCaption"
+                android:layout_marginStart="@dimen/spacing_md"
+                android:alpha="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Cancel Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:text="Cancel"
+        android:layout_marginTop="@dimen/spacing_xl"
+        app:cornerRadius="@dimen/corner_radius_lg"
+        app:strokeColor="?attr/colorPrimary"
+        app:strokeWidth="2dp"
+        android:textColor="?attr/colorPrimary" />
+</LinearLayout>
